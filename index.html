@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine?</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="card" id="card">
+        <div class="choco-emoji">🍫</div>
+
+
+
+
+        <h1 class="title" id="title">
+            <span class="name" id="name">hongor and mine </span> will you be my valentine?
+        </h1>
+
+        <div class="buttons">
+            <button class="btn yes" id="yesBtn">Yes</button>
+
+            <!-- No button is positioned absolute so it can "run away" -->
+            <button class="btn no" id="noBtn" aria-label="No">No</button>
+        </div>
+
+        <p class="hint" id="hint">"No" seems a bit shy </p>
+        <p class="msg" id="msg"></p>
+
+
+        <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+        <div class="result" id="result" hidden>
+            <div class="big">💗</div>
+            <p>Yay! See you on Valentine’s 💞</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

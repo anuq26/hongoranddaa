@@ -1,0 +1,160 @@
+﻿
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: radial-gradient(circle at top, #f6c3d6 0%, #f3a7c2 35%, #eaa0c7 100%);
+    color: #111;
+}
+
+/* ================== CARD ================== */
+.card {
+    width: min(760px, 92vw);
+    min-height: 420px;
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 22px;
+    padding: 44px 28px 34px;
+    position: relative;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+}
+
+/* ================== TITLE ================== */
+.title {
+    text-align: center;
+    font-size: clamp(22px, 4vw, 44px);
+    margin: 14px 0 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.name {
+    text-transform: lowercase;
+}
+
+/* ================== BIG CHOCOLATE EMOJI ================== */
+.choco-emoji {
+    font-size: 160px;
+    text-align: center;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.25));
+    animation: floatChoco 2.5s ease-in-out infinite;
+    user-select: none;
+}
+
+@keyframes floatChoco {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ================== BUTTONS ================== */
+.buttons {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    padding: 26px 0 10px;
+    min-height: 90px;
+}
+
+.btn {
+    border: 0;
+    padding: 14px 34px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+    .btn:active {
+        transform: scale(0.96);
+    }
+
+.yes {
+    background: #ff4d86;
+    color: white;
+    box-shadow: 0 10px 20px rgba(255, 77, 134, 0.35);
+}
+
+.no {
+    background: rgba(255, 255, 255, 0.8);
+    color: #111;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    position: absolute;
+    z-index: 5;
+}
+
+/* ================== HINT ================== */
+.hint {
+    text-align: center;
+    margin: 18px 0 0;
+    opacity: 0.7;
+}
+
+/* ================== PARTICLES LAYER ================== */
+.hearts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* 🗿 + Firework animation class (script.js ашиглана) */
+.heart-float {
+    position: absolute;
+    font-size: 22px;
+    animation: floatUp 1.2s ease forwards;
+    filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.15));
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(0.9);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-140px) scale(1.25);
+        opacity: 0;
+    }
+}
+
+.msg {
+    text-align: center;
+    margin: 10px 0 0;
+    font-weight: 700;
+    opacity: 0.85;
+}
+
+
+/* ================== RESULT ================== */
+.result {
+    text-align: center;
+    margin-top: 18px;
+}
+
+    .result .big {
+        font-size: 64px;
+        line-height: 1;
+    }
